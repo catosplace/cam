@@ -1,0 +1,4 @@
+bin
+.cam/
+
+internal/box/blob.go
