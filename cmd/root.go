@@ -1,4 +1,6 @@
 /*
+Package cmd implements CLI commands.
+
 Copyright © 2020 Catosplace <engineering@catosplace.co.nz>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of

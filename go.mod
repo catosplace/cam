@@ -19,5 +19,7 @@ require (
 	github.com/urfave/cli v1.22.3 // indirect
 	github.com/zclconf/go-cty v1.3.1 // indirect
 	go.opencensus.io v0.22.3 // indirect
+	golang.org/x/lint v0.0.0-20200302205851-738671d3881b // indirect
+	golang.org/x/tools v0.0.0-20200325203130-f53864d0dba1 // indirect
 	google.golang.org/api v0.20.0 // indirect
 )

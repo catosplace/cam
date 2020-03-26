@@ -15,6 +15,9 @@ generate:
 
 lint:
 	@golangci-lint run
+	@golint -set_exit_status ./...
+	@go vet ./...
+	@echo "[OK] Files checked successfully!"
 
 security:
 	@gosec ./...
@@ -31,5 +34,7 @@ install: generate
 clean:
 	@rm -rf $(BIN)
 	@echo "[OK] App binary was removed!"
+	@rm internal/box/blob.go
+	@echo "[OK] Removed generated code!"
 
 PHONY: fmt generate security build install clean
