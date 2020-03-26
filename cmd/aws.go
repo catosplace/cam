@@ -40,7 +40,10 @@ var awsCmd = &cobra.Command{
 	Short: "Initialise AWS Terraform state storage",
 	Long:  `Initialise an AWS S3 Bucket to store Terraform state`,
 	Run: func(cmd *cobra.Command, args []string) {
+		toggl, _ := cmd.Flags().GetBool("toggl")
+
 		log.Println("aws called")
+		log.Println(toggl)
 
 		if viper.IsSet("aws.account_id") {
 			log.Println(viper.GetString("aws.account_id"))
@@ -93,5 +96,5 @@ func init() {
 
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
-	// awsCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	awsCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }

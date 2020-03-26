@@ -24,7 +24,7 @@ security:
 	@echo "[OK] Go security check was completed!"
 
 build: fmt lint generate security
-	@go build -o $(BIN)/$(BINARY_NAME) -v 
+	@go build -ldflags "-X main.VERSION=0.0.1" -o $(BIN)/$(BINARY_NAME) -v 
 	@echo "[OK] App binary was created!"
 
 install: generate

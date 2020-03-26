@@ -25,7 +25,13 @@ import (
 	"log"
 )
 
+// VERSION is set at build time using the -ldflags parameters. For more info, see:
+// http://stackoverflow.com/a/11355611/483528
+var VERSION string
+
 func main() {
 	log.SetPrefix("[cam] ")
+	log.Println("CAM version: " + VERSION)
+
 	cmd.Execute()
 }
